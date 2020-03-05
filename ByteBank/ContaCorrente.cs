@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ByteBank
+﻿namespace ByteBank
 {
     public class ContaCorrente
     {
@@ -57,6 +53,10 @@ namespace ByteBank
 
             TotalDeContasCriadas++;
         }
+        public void Depositar(double valor)
+        {
+            _saldo += valor;
+        }
 
         public bool Sacar(double valor)
         {
@@ -67,11 +67,6 @@ namespace ByteBank
             
             _saldo -= valor;
             return true;
-        }
-
-        public void Depositar(double valor)
-        {
-            _saldo += valor;
         }
 
         public bool Transferir(double valor, ContaCorrente contaDestino)
